@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ఆనందపురం క్రీస్తు సంఘము </title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="church-name">ఆనందపురం క్రీస్తు సంఘము </div>
+    <div class="header-actions">
+        <div class="dropdown-container">
+            <label for="language"></label>
+            <select id="language" name="language" onchange="navigateToPage()">
+                <option value="" disabled selected>Telugu</option>
+                <option value="ACOC.html">English</option>
+            </select>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars fa-2x"></i>
+        </button>
+    </div>
+    <div id="menu" class="menu">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <ul>
+            <li><a href="http://127.0.0.1:3000/ACOC.html" class="menu-link">HOME</a></li>
+            <li><a href="gallery.html" target="_blank" class="menu-link">GALLERY</a></li>
+            <li><a href="resources.html" target="_blank" class="menu-link">RESOURCES</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="image-container">
+  <div class="image-container">
+    <center>
+      <img class="image" src="cimage22.jpeg" alt="Image not available">
+      <button class="prev-button" onclick="prevImage()">&#10094;</button>
+      <button class="next-button" onclick="nextImage()">&#10095;</button>
+    </center>
+    <center>
+      <img class="image active" src="first.jpeg" alt="image not available" width="1080" height="660">
+      <button class="prev-button" onclick="prevImage()">&#10094;</button>
+      <button class="next-button" onclick="nextImage()">&#10095;</button>
+    </center>
+    <center>
+      <img class="image" src="cimage32.jpg" alt="Image 3" width="1080" height="660">
+      <button class="prev-button" onclick="prevImage()">&#10094;</button>
+      <button class="next-button" onclick="nextImage()">&#10095;</button>
+    </center>
+  <div class="centered-text-container">
+    <br><br>
+    <h2 style="font-size: 3vw;">ఆనందపురం క్రీస్తు సంఘము </h2>
+	  </div>
+  </div>
+
+  <div class="section animated-section">
+<div class="worship-section">
+  <h1 style="background-color: greenyellow;">ఆదివారం ఆరాధనా కార్యక్రమములు</h1>
+    <h3>సంఘ భవనంలో మరియు ఆన్‌లైన్‌లో</h3>
+
+  <div class="worship-container">
+    <div class="worship-block">
+	<h2>తమిళ ఆరాధన</h2>
+    <h2>9 am - 10:30 am</h2>
+    </div>
+    <div class="worship-block">
+    <h2>తెలుగు ఆరాధన</h2>
+    <h2>10:30 am - 12:30 pm</h2> 
+    </div>
+    <div class="worship-block">
+      <h3>
+        నెలలో రెండవ వారంలో ఇక్కడ కుడుకుంటము: <br>
+        <a href="https://maps.app.goo.gl/apHT8JZUW7fLDDVe8" target="_blank">
+          <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0c-5.523 0-10 4.477-10 10 0 6.693 10 14 10 14s10-7.307 10-14c0-5.523-4.477-10-10-10zm0 14c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"/>
+          </svg>
+        </a>
+      </h3>
+      <h3>(తమిళం & తెలుగు)</h3>
+      <h2>10:30 am - 1:00 pm</h2>
+    </div>    
+  </div>
+</div>
+</div>
+  <button class="scroll-to-top-button" onclick="scrollToTop()">
+    <i class="fas fa-arrow-alt-circle-up"></i>
+  </button>
+<div class="section animated-section">
+<div id="kids-section" class=kids-section>
+  <h2 style="background-color: greenyellow;">పిల్లల కార్యక్రమాలు</h2>
+
+  <div class="kids-container">
+    <div class="kids-block">
+	      <h3>ఆదివారం పాఠశాల (9:00 am)</h3>
+
+        <img width="300" height="200" src="sundayschool.jpeg" alt="Telugu Worship">
+    </div>
+    <div class="kids-block">
+	      <h3> VBS, క్రీడలు </h3>
+        <img width="300" height="200" src="cimage32.jpg" alt="Tamil Worship">
+
+    </div>
+</div>
+</div>
+
+<div class="kids-container">
+<div class="programs-section">
+  <h2 style="background-color: greenyellow;">మా ఇతర ఆరాధనలు </h2>
+  <div class="program-card">
+      <h3>యువకుల సమ్మేళనం</h3>
+      <h4>ఆదివారం 3 pm</h4>
+  </div>
+  <div class="program-card">
+      <h3>స్త్రీల కూడిక</h3>
+      <h4>శనివారం 3 pm</h4>
+  </div>
+  <div class="program-card">
+      <h3>బైబిల్ క్లాస్</h3>
+      <h4>సోమవారం 7 pm</h4>
+  </div>
+ <div class="program-card">
+      <h3>బైబిల్ స్టడీ</h3>
+      <h4>బుధవారం 7 pm</h4>
+  </div>
+  <div class="program-card">
+      <h3>గృహ కుడిక</h3>
+      <h4>మంగళవారం 7 pm</h4>
+  </div>
+</div>
+</div>
+
+
+<div class="section animated-section">
+<div class=kids-section>
+  <h2 style="background-color: greenyellow;">బోధకులు</h2>
+  <div class="kids-container">
+    <div class="kids-block">
+	      <h3>Bro బాబు V.E.</h3>
+        <h3>(Ph No: 1111111111)</h3>
+
+        <img width="200" height="200" src="preacher.jpeg" alt="Image Not available">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="elders-image">
+  <h2 style="background-color: greenyellow;">పెద్దలు మరియు పరిచాకులు</h2>
+      <img src="cimage3.jpeg" alt="Tamil Worship">
+</div>
+
+<div class="combined-div">`
+  <div class="youtube-link"0>
+    <div class="kids-container">
+      <!-- YouTube Link -->
+      <h2 style="background-color: greenyellow;">Youtube</h2>
+      <h4>మా రికార్డ్ చేయబడిన ఆరాధనలు మరియు <br> ప్రత్యక్ష ప్రసంగాలు అందుబాటులో ఉన్నాయి</h4>
+
+      <iframe width="300" height="250" src="https://www.youtube.com/embed/3ZXqdovtbg8?si=IoXNTlbFXtZW4OK8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+  <div class="location">
+    <div class="kids-container">
+
+      <h2 style="color: black; background-color: greenyellow;">Location</h2>
+      <h4 style="color: black;">#22,1వ క్రాస్ రోడ్, జీవన్ బీమా నగర్,<br> బెంగళూరు 560075 </h4>
+                 <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.113237826433!2d77.660251!3d12.9646052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13fbf7b535d1%3A0xbba74086970d5297!2sChurch%20Of%20Christ!5e0!3m2!1sen!2sin!4v1717272017960!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </a>
+              </div>
+  </div>
+</div>
+
+  <div class="contact-info">
+    <div class="kids-container">
+      <!-- Contact Information -->
+      <h2 style="background-color: greenyellow;">Contact Us:</h2>
+      <!--<h4 style="color: black;">మీకు ఎవైన ప్రశ్నలు ఉంఠే, మామల్ని సంప్రదించండి</h4>-->
+      <h4 class="email"><a href="mailto:church.of.christ.acoc@gmail.com" style="color: black;">church.of.christ.acoc@gmail.com</a></h4>
+      <h4>ఫోన్: +1234567890 (Bro బాబు VE.)</h4><br>
+      <div id="chatbox">
+        <div id="chat-content">
+          <!--<div id="message">ప్రశ్న ఉందా!!</div>-->
+          <textarea id="query" rows="5" placeholder="మీ ప్రశ్నను ఇక్కడ వ్రాయండి..."></textarea>
+          <button onclick="sendQuery()">Send</button>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="churches">
+  <h2>బెంగుళూరులోని ఇతర సంఘములు</h2>
+  <h3>మీకు సమీపంలోని చర్చిని కనుగొనండి</h3>
+  <div class="church">
+    <a href="location1.html">
+      <img width="100" height="150" src="mrcoc.jpeg" alt="M R S Palya Church Of Christ">
+    </a>
+    <h3>M R S పాలయ క్రీస్తు సంఘము </h3>
+    <a href="https://maps.app.goo.gl/fhYFD5qgoEjB6tYw8" target="_blank" class="location-link">Location</a>
+  </div>
+
+  <div class="church">
+    <a href="location2.html">
+      <img width="100" height="150" src="kcoc.jpeg" alt="KR Puram Church Of Christ">
+    </a>
+    <h3>K R పురం క్రీస్తు సంఘము </h3>
+    <a href="https://maps.app.goo.gl/8Rm9jCmr3VgYz3LB9" target="_blank" class="location-link">Location</a>
+  </div>
+
+  <div class="church">
+    <a href="https://www.google.com/maps/place/Mathikere+Church+of+Christ/@13.0294112,77.5583788,17z/data=!3m1!4b1!4m12!1m5!3m4!2zMTPCsDAxJzQyLjkiTiA3N8KwMzMnNDQuMCJF!8m2!3d13.0285833!4d77.5622222!3m5!1s0x3bae17df5bfe0a81:0x65d571dded6ba8ef!8m2!3d13.029406!4d77.5609537!16s%2Fg%2F1ptvtfngq?entry=ttu">
+      <img width="100" height="150" src="mcoc.jpeg" alt="Church Of Christ - Mathikere">
+    </a>
+    <h3>మతికెరె క్రీస్తు సంఘము</h3>
+    <a href="https://www.google.com/maps/place/Mathikere+Church+of+Christ/@13.0294112,77.5583788,17z/data=!3m1!4b1!4m12!1m5!3m4!2zMTPCsDAxJzQyLjkiTiA3N8KwMzMnNDQuMCJF!8m2!3d13.0285833!4d77.5622222!3m5!1s0x3bae17df5bfe0a81:0x65d571dded6ba8ef!8m2!3d13.029406!4d77.5609537!16s%2Fg%2F1ptvtfngq?entry=ttu" target="_blank" class="location-link">Location</a>
+  </div>
+
+  <div class="church">
+    <a href="location2.html">
+      <img width="100" height="150" src="scoc.jpeg" alt="KR Puram Church Of Christ">
+    </a>
+    <h3>శివాజీనగర్ క్రీస్తు సంఘము </h3>
+    <a href="https://maps.app.goo.gl/ra7K56ZHqNNN5mRSA" target="_blank" class="location-link">Location</a>
+  </div>
+</div>
+<div>
+<footer><p><br>ఇప్పుడే మాతో చేరండి !!</p></footer>
+</div>
+</body>
+</html>
