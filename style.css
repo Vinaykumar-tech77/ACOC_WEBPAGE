@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color:  #e0ffcd;
-  background: lightcyan;
+  background-color:  white;
+  background: white;
 }
 
 .content {
@@ -129,8 +129,8 @@ body {
 }
 
 .worship-block:hover {
-  background-color: greenyellow;
-  color: black;
+  background-color: #002a45;
+  color: white;
 }
 .telugucoc-banner {
   background-color: black;
@@ -166,7 +166,8 @@ body {
   background-color: lightyellow;
 }
 .kids-block:hover{
-  background-color: greenyellow;
+  background-color: #002a45;
+  color: white;
 }
 .kids-block img {
   max-width: 100%;
@@ -265,7 +266,7 @@ body {
   right: 0;
   width: 20%;
   height: 80%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #032438;
   z-index: 1000;
 }
 
@@ -293,9 +294,9 @@ body {
 }
 
 #menu ul li a:hover {
-  color: greenyellow;
+  color: white;
 }
-
+                   x   
 
 .animated-section {
   opacity: 0;
@@ -334,7 +335,7 @@ body {
 }
 
 .scroll-to-top-button:hover {
-  background-color: #0056b3; 
+  background-color: #002a45; 
   transform: translateY(-3px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
@@ -383,7 +384,7 @@ body {
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  background-color: black;
+  background-color: #002a45;
   color: white;
   font-size: 36px;
   cursor: pointer;
@@ -408,7 +409,7 @@ body {
   bottom: 20px;
   right: 0 !important;
   margin: 20px auto;
-  background: greenyellow;
+  background:#002a45;
   border: 1px solid black;
   padding: 15px;
   border-radius: 10px;
@@ -426,13 +427,14 @@ body {
  
 
 .combined-div {
+  background-color: rgb(221, 244, 252);
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
 }
 
 .youtube-link {
@@ -557,7 +559,8 @@ body {
   }
 
   #menu {
-    width: 60%;
+    width: 100%;
+    height: 100%;
   }
   .program-card{
     transform: translate(3,0%);
@@ -597,7 +600,7 @@ flex: auto !important;
 }
 
 footer {
-  background-color: black;
+  background-color: #002a45;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -648,7 +651,8 @@ footer {
 .program-card:hover {
   transform: translateY(-5px);
   box-shadow: 2px 2px 20px lightgreen(0, 0, 0, 0.2);
-  background-color: greenyellow;
+  background-color: #002a45;
+  color: white;
 }
 
 .program-card h3 {
@@ -656,7 +660,9 @@ footer {
   font-size: 1.2em;
   margin-bottom: 5px;
 }
-
+.programs-section:hover h3 h4{
+  color: white;
+}
 .program-card p {
   color: black;
   font-size: 1em;
@@ -674,7 +680,7 @@ footer {
   font-size: 14px;
   border: 2px solid black;
   border-radius: 5px;
-  background-color: greenyellow;
+  background-color: white;
   color: black;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.2s, border-color 0.3s;
@@ -683,7 +689,7 @@ footer {
 }
 
 #language:hover {
-  background-color: greenyellow;
+  background-color: white;
   border-color: white;
 }
 
@@ -723,6 +729,12 @@ footer {
   transition: transform 0.3s ease;
   background-color: lightyellow;
 }
+.church a:hover{
+  color: white;
+}
+.church a{
+  color: white;
+}
 
 .church:hover {
   transform: scale(1.05);
@@ -736,7 +748,7 @@ footer {
 }
 
 .churches h2 {
-  background-color: greenyellow;
+  background-color: #002a45;
   padding: 10px;
   margin-top: 20px;
   color: black;
@@ -749,7 +761,7 @@ footer {
   display: inline-block;
   margin-top: 10px;
   padding: 5px 10px;
-  background-color: greenyellow;
+  background-color: #002a45;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -757,11 +769,12 @@ footer {
 }
 
 .location-link:hover {
-  background-color: greenyellow;
+  background-color: #002a45;
+  color: white;
 }
 
 header {
-  background-color: black;
+  background-color: #002a45;
   color: white;
   padding: 10px;
   display: flex;
@@ -832,3 +845,5 @@ header {
   text-decoration: none;
   cursor: pointer;
 }
+
+
