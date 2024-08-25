@@ -427,7 +427,7 @@ body {
  
 
 .combined-div {
-  background-color: rgb(238, 251, 255);
+  background-color: rgb(234, 247, 252);
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -557,9 +557,13 @@ body {
   .telugucoc-banner h3 {
     font-size: 18px;
   }
-
+#language{
+  width: 160% !important;
+  font-size: 17px !important;
+  padding: 0% !important;
+}
   #menu {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   .program-card{
