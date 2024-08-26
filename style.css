@@ -479,7 +479,7 @@ body {
     font-size: 14px;
   }
   .image-container img {
-   transform: translate(-0px,15px) scale(1);
+   transform: translate(-0px,15px) scale(1.13);
   }
   .centered-text-container h1 {
     font-size: 22px;
