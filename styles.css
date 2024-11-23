@@ -82,7 +82,7 @@ h1 {
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #close-menu {
@@ -269,7 +269,7 @@ h1 {
   }
 
   .service {
-    width: 90%; /* Full width for mobile */
+    width: 95%; /* Full width for mobile */
   }
 }
 
@@ -331,7 +331,7 @@ h1 {
     }
   
     .activity {
-      width: 90%; /* Full width for mobile */
+      width: 95%; /* Full width for mobile */
     }
   }
 
@@ -565,7 +565,7 @@ h1 {
     }
   
     .church {
-      width: 90%;
+      width: 95%;
       margin: 0 auto;
     }
   }
