@@ -269,7 +269,7 @@ h1 {
   }
 
   .service {
-    width: 95%; /* Full width for mobile */
+    width: 92%; /* Full width for mobile */
   }
 }
 
@@ -331,7 +331,7 @@ h1 {
     }
   
     .activity {
-      width: 95%; /* Full width for mobile */
+      width: 92%; /* Full width for mobile */
     }
   }
 
@@ -565,7 +565,7 @@ h1 {
     }
   
     .church {
-      width: 95%;
+      width: 92%;
       margin: 0 auto;
     }
   }
