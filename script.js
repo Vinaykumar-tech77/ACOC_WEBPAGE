@@ -14,14 +14,12 @@ closeMenu.addEventListener('click', () => {
 // Language Toggle
 const languageToggle = document.getElementById('language-toggle');
 languageToggle.addEventListener('click', () => {
-    if (languageToggle.textContent === 'Telugu') {
+    if (languageToggle.textContent === 'తెలుగు') {
         window.location.href = "telugu.html";
         languageToggle.textContent = 'English';
-        alert('Switched to Telugu');
     } else {
         window.location.href = "index.html";
         languageToggle.textContent = 'Telugu';
-        alert('Switched to English');
     }
 });
 
