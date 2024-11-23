@@ -1,0 +1,621 @@
+/* General Reset */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fjord One', serif;
+    background: rgb(250, 160, 75);
+}
+
+/* Header Styling */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px; /* Add spacing between elements */
+}
+h1 {
+    font-size: 1.2rem;
+}
+
+.language-selector {
+    margin-left: auto; /* Push the language button to the right before the menu icon */
+}
+
+.language-selector button {
+    background-color: #f8f9fa;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+     margin-left: 10px;
+}
+
+/* Menu Styling */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#close-menu {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+}
+.image-slider {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.controls span {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    user-select: none;
+}
+
+.controls span:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* Main Title Section */
+.main-title {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: linear-gradient(90deg, #f8b400, #f76c6c); /* Gradient background */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.main-title .title-english {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-title .title-telugu {
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 10px 0;
+    font-family: 'Noto Sans Telugu', sans-serif;
+    text-transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title .title-english {
+        font-size: 1em;
+    }
+    .main-title .title-telugu {
+        font-size: 1.3em;
+    }
+}
+
+/* Worship Services Section */
+.worship-services {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1280px; /* Overall width */
+}
+
+.worship-services h2 {
+  font-size: 2em;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.worship-services p {
+  font-size: 1.2em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around; /* Equal spacing */
+  gap: 15px; /* Space between each worship card */
+}
+
+.service {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust for three services side by side */
+  text-align: center;
+}
+
+.service h3 {
+  font-size: 1em;
+  color: black;
+}
+
+.service p {
+  font-size: 1.1em;
+  color: black;
+}
+
+.service .note {
+  font-size: 0.9em;
+  color: black;
+  font-style: italic;
+}
+
+.location-icon img {
+  width: 75px;
+  height: 75px;
+  margin-top: 0px;
+}
+
+.location-icon {
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .worship-services {
+    padding: 15px;
+  }
+
+  .services {
+    flex-direction: column; /* Stack worship services for small screens */
+    gap: 15px;
+  }
+
+  .service {
+    width: 90%; /* Full width for mobile */
+  }
+}
+
+/* Kids Block Section */
+.kids-block {
+    background-color: #fdf6e3;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 1300px;
+  }
+  
+  .kids-block h2 {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .kids-block p {
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 15px;
+  }
+  
+  .activities {
+    display: flex;
+    justify-content: space-around; /* Space between activities */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .activity {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Adjust width for two items in a row */
+    text-align: center;
+  }
+  
+  .activity h3 {
+    font-size: 1.4em;
+    color: black;
+  }
+  
+  .activity p {
+    font-size: 1.1em;
+    color: black;
+  }
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .activities {
+      flex-direction: column; /* Stack activities vertically */
+      gap: 15px;
+    }
+  
+    .activity {
+      width: 90%; /* Full width for mobile */
+    }
+  }
+
+  /* Other Programs Section */
+.other-programs {
+    background-color: #f0f8ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 1300px;
+    position: center;
+  }
+  
+  .other-programs h2 {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .programs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Flexibility for responsive design */
+    gap: 15px; 
+  }
+  
+  .program {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .program h3 {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .program p {
+    font-size: 1em;
+    color: black;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .programs-list {
+      grid-template-columns: 1fr; /* Stack programs vertically on small screens */
+    }
+    .elders-image img {
+        width: 100% !important;
+      }
+
+  }
+  .elders-image{
+    background-color: #f0f8ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 1300px;
+    position: center;
+
+  }
+  .elders-image img {
+    width: 80%;
+  }
+
+  .leader-block{
+    background-color: #fdf6e3;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 1300px;
+  }
+
+  /* Connect Us Section */
+.connect-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items properly */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .connect-block {
+    flex: 1 1 calc(33.33% - 20px); /* 3 blocks per row on larger screens */
+    max-width: 350px; /* Limits the block width */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .connect-block h2 {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .connect-block iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .connect-block p {
+    font-size: 1em;
+    color: black;
+  }
+  
+  .connect-block a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .connect-block a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Query Form */
+  form#query-form {
+    margin-top: 20px;
+  }
+  
+  form#query-form textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 1em;
+  }
+  
+  form#query-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  form#query-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .connect-block {
+      flex: 1 1 100%; /* Stacks blocks on smaller screens */
+      max-width: 100%; /* Uses full width of container */
+    }
+  
+    .connect-us {
+      gap: 15px; /* Reduces gap for smaller screens */
+    }
+  }
+  .nearby-churches {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .nearby-churches h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .churches-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .church {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .church:hover {
+    transform: translateY(-5px);
+  }
+  
+  .church img {
+    max-width: 100%;
+    height: 150px;
+    border-radius: 8px;
+  }
+  
+  .location-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .location-link:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .churches-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .church {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-top h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .social-link img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-link:hover img {
+    transform: scale(1.1);
+  }
+  
+  .footer-address,
+  .footer-message {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  @media (max-width: 768px) {
+    .social-links {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .footer-top h3 {
+      font-size: 20px;
+    }
+  
+    .footer-address,
+    .footer-message {
+      font-size: 16px;
+    }
+  }
+    
