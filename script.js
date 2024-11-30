@@ -133,19 +133,17 @@ popupImage.addEventListener('wheel', (e) => {
 });
 
 
-
-document.getElementById('query-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-  
-    const query = event.target.query.value;
-  
-    if (!query.trim()) {
-      alert('Please enter your query.');
-      return;
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling effect
+    });
+}
+window.onscroll = function () {
+    let scrollButton = document.querySelector('.scroll-to-top-button');
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        scrollButton.style.display = 'block';
+    } else {
+        scrollButton.style.display = 'none';
     }
-  
-    // Simulate sending the query to an email
-    alert('Your query has been sent! Thank you.');
-    event.target.reset();
-  });
-  
+};
