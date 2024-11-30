@@ -20,9 +20,22 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1001;
+}
+#overlay {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Optional: Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header-content {
     display: flex;
     align-items: center;
@@ -31,7 +44,7 @@ header {
     gap: 10px; /* Add spacing between elements */
 }
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .language-selector {
@@ -57,13 +70,14 @@ h1 {
 
 /* Menu Styling */
 .menu {
+    text-align: center;
     display: none;
     position: fixed;
     top: 0;
     right: 0;
     background-color: black;
-    width: 250px;
-    height: 100vh;
+    width: 175px;
+    height: 25vh;
     padding: 20px;
     flex-direction: column;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -99,11 +113,15 @@ h1 {
 /* Responsive Design */
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .menu a {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .menu {
+      width: 175px;
+      height: 20vh;
     }
 }
 .image-slider {
@@ -154,6 +172,42 @@ h1 {
 .controls span:hover {
     background: rgba(0, 0, 0, 0.8);
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  text-align: center;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  transition: transform 0.3s ease;
+}
+
+.popup-close {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
 /* Main Title Section */
 .main-title {
     text-align: center;
@@ -185,94 +239,80 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-title .title-english {
-        font-size: 1em;
-    }
-    .main-title .title-telugu {
         font-size: 1.3em;
     }
+    .main-title .title-telugu {
+        font-size: 1.8em;
+    }
+    .popup-close{
+      top: -80px;
+    }
 }
 
-/* Worship Services Section */
-.worship-services {
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 1280px; /* Overall width */
-}
-
-.worship-services h2 {
-  font-size: 2em;
-  color: black;
+h3 {
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.worship-services p {
-  font-size: 1.2em;
-  color: black;
-  margin-bottom: 20px;
+p {
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
-.services {
-  display: flex;
-  justify-content: space-around; /* Equal spacing */
-  gap: 15px; /* Space between each worship card */
+strong {
+  font-weight: bold;
 }
 
-.service {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 30%; /* Adjust for three services side by side */
-  text-align: center;
-}
-
-.service h3 {
-  font-size: 1em;
-  color: black;
-}
-
-.service p {
-  font-size: 1.1em;
-  color: black;
-}
-
-.service .note {
-  font-size: 0.9em;
-  color: black;
-  font-style: italic;
-}
-
-.location-icon img {
-  width: 75px;
-  height: 75px;
-  margin-top: 0px;
-}
-
-.location-icon {
+a {
+  text-decoration: none;
   display: inline-block;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .worship-services {
-    padding: 15px;
-  }
-
-  .services {
-    flex-direction: column; /* Stack worship services for small screens */
-    gap: 15px;
-  }
-
-  .service {
-    width: 92%; /* Full width for mobile */
-  }
+/* Layout for Worship Containers */
+.worship-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.worship {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 48%; /* For desktop view, adjust this */
+  box-sizing: border-box;
+}
+
+.worship img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .worship {
+    width: 100%; /* Stack vertically on mobile */
+    margin: 10px 0;
+  }
+
+  .worship h3 {
+    font-size: 1rem;
+  }
+
+  .worship p {
+    font-size: 0.9rem;
+  }
+}
+.page-title{
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 0%;
+}
 /* Kids Block Section */
 .kids-block {
     background-color: #fdf6e3;
@@ -285,7 +325,7 @@ h1 {
   }
   
   .kids-block h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: black;
     margin-bottom: 10px;
   }
@@ -331,7 +371,7 @@ h1 {
     }
   
     .activity {
-      width: 92%; /* Full width for mobile */
+      width: 90%; /* Full width for mobile */
     }
   }
 
@@ -347,7 +387,7 @@ h1 {
   }
   
   .other-programs h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: black;
     margin-bottom: 10px;
   }
@@ -403,7 +443,7 @@ h1 {
 
   .leader-block{
     background-color: #fdf6e3;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -418,7 +458,7 @@ h1 {
     justify-content: center; /* Centers items properly */
     gap: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fdf6e3;
     border-radius: 8px;
     margin: 20px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -427,7 +467,7 @@ h1 {
   .connect-block {
     flex: 1 1 calc(33.33% - 20px); /* 3 blocks per row on larger screens */
     max-width: 350px; /* Limits the block width */
-    background-color: white;
+    background-color: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -436,7 +476,7 @@ h1 {
   }
   
   .connect-block h2 {
-    font-size: 1em;
+    font-size: 1.2em;
     color: black;
     margin-bottom: 20px;
   }
@@ -454,7 +494,7 @@ h1 {
   }
   
   .connect-block a {
-    color: #007bff;
+    color: black;
     text-decoration: none;
   }
   
@@ -471,16 +511,17 @@ h1 {
     width: 80%;
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     resize: none;
-    font-size: 1em;
+    font-size: 1.2em;
+    color: black;
   }
   
   form#query-form button {
-    display: block;
-    width: 100%;
+    text-align: center;
+    width: 40%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     font-size: 1em;
     border: none;
@@ -489,9 +530,6 @@ h1 {
     margin-top: 10px;
   }
   
-  form#query-form button:hover {
-    background-color: #0056b3;
-  }
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -504,71 +542,18 @@ h1 {
       gap: 15px; /* Reduces gap for smaller screens */
     }
   }
-  .nearby-churches {
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .nearby-churches h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .churches-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .church {
-    background: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .church:hover {
-    transform: translateY(-5px);
-  }
-  
-  .church img {
-    max-width: 100%;
-    height: 150px;
-    border-radius: 8px;
-  }
   
   .location-link {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
   }
   
-  .location-link:hover {
-    background-color: #0056b3;
-  }
-
-  @media (max-width: 768px) {
-    .churches-container {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .church {
-      width: 92%;
-      margin: 0 auto;
-    }
-  }
   .footer {
     background-color: black;
     color: #fff;
@@ -584,18 +569,19 @@ h1 {
   .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-bottom: 15px;
   }
   
   .social-link img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.3s ease;
+    border-radius: 20px;
   }
   
   .social-link:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   
   .footer-address,
@@ -606,7 +592,7 @@ h1 {
   @media (max-width: 768px) {
     .social-links {
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 30px;
     }
   
     .footer-top h3 {
@@ -615,7 +601,7 @@ h1 {
   
     .footer-address,
     .footer-message {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
     
