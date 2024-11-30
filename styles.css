@@ -308,6 +308,7 @@ a {
   }
 }
 .page-title{
+  margin-top: 0%;
   text-align: center;
   background-color: white;
   color: black;
@@ -461,6 +462,7 @@ a {
     background-color: #fdf6e3;
     border-radius: 8px;
     margin: 20px auto;
+    margin-bottom: 0%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -501,36 +503,6 @@ a {
   .connect-block a:hover {
     text-decoration: underline;
   }
-  
-  /* Query Form */
-  form#query-form {
-    margin-top: 20px;
-  }
-  
-  form#query-form textarea {
-    width: 80%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid black;
-    resize: none;
-    font-size: 1.2em;
-    color: black;
-  }
-  
-  form#query-form button {
-    text-align: center;
-    width: 40%;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    font-size: 1em;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  
   /* Responsive Design */
   @media (max-width: 768px) {
     .connect-block {
@@ -603,5 +575,28 @@ a {
     .footer-message {
       font-size: 18px;
     }
+    .scroll-to-top-button{
+      right: 5px !important;
+    }
   }
-    
+  .scroll-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top-button:hover {
+    background-color: #0056b3; /* Darken on hover */
+}
+ 
