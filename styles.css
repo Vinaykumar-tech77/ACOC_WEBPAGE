@@ -37,70 +37,122 @@ header {
   }
 }
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px; /* Add spacing between elements */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px; /* Add spacing between elements */
 }
 h1 {
-    font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .language-selector {
-    margin-left: auto; /* Push the language button to the right before the menu icon */
+  margin-left: auto; /* Push the language button to the right before the menu icon */
 }
 
 .language-selector button {
-    background-color: #f8f9fa;
-    color: black;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-left: 10px;
-    border-radius: 3px;
-    font-size: 1rem;
+  background-color: #f8f9fa;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 1rem;
 }
 
 .menu-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-     margin-left: 10px;
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.menu-icon .bar {
+display: block;
+width: 30px;
+height: 4px;
+margin: 6px 0;
+background-color: white;
 }
 
 /* Menu Styling */
 .menu {
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;/* Push the language button to the right before the menu icon */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: center;
+  background-color: #f8f9fa;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.menu li {
+display: inline-block;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.menu-icon .bar {
+display: block;
+width: 30px;
+height: 4px;
+margin: 6px 0;
+background-color: white;
+}
+#close-menu{
+  display:none;
+}
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  h1 {
+      font-size: 1.1rem;
+  }
+
+  .menu a {
+      font-size: 1.2rem;
+  }
+  .menu {
     text-align: center;
     display: none;
+    width: 175px;
+    height: 15vh;
     position: fixed;
     top: 0;
     right: 0;
     background-color: black;
-    width: 175px;
-    height: 20vh;
     padding: 20px;
     flex-direction: column;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 0 5px hsla(0, 0%, 0%, 0.5);
     z-index: 1001;
-}
-
-.menu ul {
-    list-style: none;
-    margin-top: 50px;
-}
-
-.menu li {
-    margin-bottom: 20px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-#close-menu {
-    font-size: 1.5rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu ul{
+    margin-top: 50px !important;
+  }
+  #close-menu {
+    display: block;
+    font-size: 1.7rem;
     color: white;
     background: none;
     border: none;
@@ -108,21 +160,7 @@ h1 {
     top: 10px;
     right: 10px;
     cursor: pointer;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 1.1rem;
-    }
-
-    .menu a {
-        font-size: 1.2rem;
-    }
-    .menu {
-      width: 175px;
-      height: 15vh;
-    }
+  }
 }
 .image-slider {
     width: 100%;
