@@ -1,4 +1,3 @@
-/* General Reset */
 body, h1, ul, li, a {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ body {
     background: rgb(250, 160, 75);
 }
 
-/* Header Styling */
 header {
     background-color: black;
     color: white;
@@ -27,7 +25,6 @@ header {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Optional: Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -41,14 +38,14 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 10px; /* Add spacing between elements */
+  gap: 10px;
 }
 h1 {
   font-size: 1.5rem;
 }
 
 .language-selector {
-  margin-left: auto; /* Push the language button to the right before the menu icon */
+  margin-left: auto;
 }
 
 .language-selector button {
@@ -76,13 +73,12 @@ margin: 6px 0;
 background-color: white;
 }
 
-/* Menu Styling */
 .menu {
   margin: 0; 
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: center;/* Push the language button to the right before the menu icon */
+  align-items: center;
 }
 
 .menu ul {
@@ -121,7 +117,7 @@ background-color: white;
 #close-menu{
   display:none;
 }
-/* Responsive Design */
+
 @media screen and (max-width: 600px) {
   h1 {
       font-size: 1.1rem;
@@ -246,12 +242,11 @@ background-color: white;
   cursor: pointer;
 }
 
-/* Main Title Section */
 .main-title {
     text-align: center;
     margin: 20px 0;
     padding: 10px;
-    background: linear-gradient(90deg, #f8b400, #f76c6c); /* Gradient background */
+    background: linear-gradient(90deg, #f8b400, #f76c6c);
     color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -274,7 +269,6 @@ background-color: white;
     text-transform: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .main-title .title-english {
         font-size: 1.3em;
@@ -309,7 +303,6 @@ a {
   display: inline-block;
 }
 
-/* Layout for Worship Containers */
 .worship-container {
   display: flex;
   flex-wrap: wrap;
@@ -317,12 +310,12 @@ a {
 }
 
 .worship {
-  background-color: #f0f8ff;
+  background-color: white;
   padding: 15px;
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 48%; /* For desktop view, adjust this */
+  width: 48%;
   box-sizing: border-box;
 }
 
@@ -332,11 +325,14 @@ a {
   vertical-align: middle;
   margin-left: 10px;
 }
+.timeinfo{
+  text-align: center;
+  background-color: #f0f8ff;
+}
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .worship {
-    width: 100%; /* Stack vertically on mobile */
+    width: 100%; 
     margin: 10px 0;
   }
 
@@ -351,11 +347,10 @@ a {
 .page-title{
   margin-top: 0%;
   text-align: center;
-  background-color: white;
   color: black;
   padding: 0%;
 }
-/* Kids Block Section */
+
 .kids-block {
     background-color: #fdf6e3;
     padding: 10px;
@@ -380,8 +375,8 @@ a {
   
   .activities {
     display: flex;
-    justify-content: space-around; /* Space between activities */
-    gap: 20px; /* Space between cards */
+    justify-content: space-around;
+    gap: 20px; 
   }
   
   .activity {
@@ -390,7 +385,7 @@ a {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 45%; /* Adjust width for two items in a row */
+    width: 45%; 
     text-align: center;
   }
   
@@ -405,19 +400,18 @@ a {
   }
 
   
-  /* Responsive Design */
+  
   @media (max-width: 768px) {
     .activities {
-      flex-direction: column; /* Stack activities vertically */
+      flex-direction: column;
       gap: 15px;
     }
   
     .activity {
-      width: 90%; /* Full width for mobile */
+      width: 90%; 
     }
   }
 
-  /* Other Programs Section */
 .other-programs {
     background-color: #f0f8ff;
     padding: 10px;
@@ -436,7 +430,7 @@ a {
   
   .programs-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Flexibility for responsive design */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px; 
   }
   
@@ -458,11 +452,10 @@ a {
     font-size: 1em;
     color: black;
   }
-  
-  /* Responsive Design for Mobile */
+ 
   @media (max-width: 768px) {
     .programs-list {
-      grid-template-columns: 1fr; /* Stack programs vertically on small screens */
+      grid-template-columns: 1fr;
     }
     .elders-image img {
         width: 100% !important;
@@ -493,11 +486,10 @@ a {
     max-width: 1300px;
   }
 
-  /* Connect Us Section */
 .connect-us {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers items properly */
+    justify-content: center; 
     gap: 20px;
     padding: 20px;
     background-color: #fdf6e3;
@@ -508,8 +500,8 @@ a {
   }
   
   .connect-block {
-    flex: 1 1 calc(33.33% - 20px); /* 3 blocks per row on larger screens */
-    max-width: 350px; /* Limits the block width */
+    flex: 1 1 calc(33.33% - 20px); 
+    max-width: 350px; 
     background-color: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
@@ -544,15 +536,15 @@ a {
   .connect-block a:hover {
     text-decoration: underline;
   }
-  /* Responsive Design */
+ 
   @media (max-width: 768px) {
     .connect-block {
-      flex: 1 1 100%; /* Stacks blocks on smaller screens */
-      max-width: 100%; /* Uses full width of container */
+      flex: 1 1 100%;
+      max-width: 100%;
     }
   
     .connect-us {
-      gap: 15px; /* Reduces gap for smaller screens */
+      gap: 15px;
     }
   }
   
