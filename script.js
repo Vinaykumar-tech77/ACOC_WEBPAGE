@@ -173,3 +173,14 @@ popupImage.addEventListener('wheel', (e) => {
         });
     
     })(jQuery);
+    function toggleFAQ(element) {
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== element) {
+                item.classList.remove('active');
+                item.querySelector(".faq-icon").textContent = "+";
+            }
+        });
+        element.classList.toggle('active');
+        const icon = element.querySelector(".faq-icon");
+        icon.textContent = element.classList.contains('active') ? "−" : "+";
+    }
