@@ -642,7 +642,7 @@ a {
     text-align: center;
     line-height: 46px;
     font-size: 18px;
-    color: #1f2029;
+    color: black;
     left: 0;
     top: 0;
     height: 46px;
@@ -692,9 +692,62 @@ a {
   }
   
   .progress-wrap svg.progress-circle path {
-    stroke: #1f2029;
+    stroke: #007bff;
     stroke-width: 5;
     box-sizing: border-box;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
   }
+  .faq-container {
+    max-width: 700px;
+    margin: auto;
+}
+.faq-item {
+    background: white;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.faq-item:hover {
+    background: #f1f1f1;
+}
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+.faq-icon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+.faq-answer {
+    display:none;
+    padding-top: 12px;
+    font-size: 15px;
+    color: black;
+    line-height: 1.5;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align:justify;
+}
+.active .faq-answer {
+    display: block;
+}
+.active .faq-icon {
+    transform: rotate(180deg);
+    color: red; /* Change color when active */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
